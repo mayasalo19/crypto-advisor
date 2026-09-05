@@ -80,7 +80,7 @@ export interface InsightsResponse {
 }
 
 export const fetchMarketInsights = async (payload: InsightsRequest): Promise<InsightsResponse> => {
-  const response = await fetch("http://127.0.0.1:5000/api/insights", {
+  const response = await fetch(`${BASE_URL}/insights`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export interface CryptoMeme {
 }
 
 export const getCryptoMeme = async (): Promise<CryptoMeme> => {
-  const response = await fetch("http://127.0.0.1:5000/api/meme");
+  const response = await fetch(`${BASE_URL}/meme`);
   if (!response.ok) {
     throw new Error("Failed to load meme");
   }
@@ -121,7 +121,7 @@ export interface VotePayload {
 }
 
 export const submitVote = async (payload: VotePayload): Promise<void> => {
-  const response = await fetch("http://127.0.0.1:5000/api/vote", {
+  const response = await fetch(`${BASE_URL}/vote`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
