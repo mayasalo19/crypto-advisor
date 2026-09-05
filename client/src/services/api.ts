@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+// Read the URL from Vercel environment variables, fallback to local server
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: BASE_URL,
 });
 
 // Interceptor: attaches JWT token to protected requests
