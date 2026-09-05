@@ -1,0 +1,35 @@
+# Environment secrets 
+.env
+.env.*
+*.env
+
+# Python
+server/venv/
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node / React
+client/node_modules/
+node_modules/
+client/dist/
+dist/
+client/build/
+build/
+.npm
+.eslintcache
+
+# Logs & DBs
+*.log
+*.sqlite
+*.sqlite3
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
